@@ -77,6 +77,7 @@ int Joueur::buyPersonnage(std::string name)
     return 0;
 }
 
+
 std::ostream& operator<<(std::ostream& os, Joueur j)
 {
     os << j.getName()<< std::endl;

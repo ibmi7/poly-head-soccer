@@ -245,6 +245,7 @@ void Game::selectPersonnageMenu(){
     int tyPos = 150;
     titleText->setPos(txPos,tyPos);
     scene->addItem(titleText);
+    //unfocus player
 
     // add the players choice
     QGraphicsTextItem * messi = new QGraphicsTextItem(QString("Messi"));
@@ -454,6 +455,8 @@ void Game::play(){
     // create the personnage
     Personnage * p1 = new Personnage(Qt::Key_Left,Qt::Key_Up,Qt::Key_Right,Qt::Key_Down);
     Personnage * p2 = new Personnage(Qt::Key_Q,Qt::Key_Z,Qt::Key_D,Qt::Key_S);
+    p1->setInGame(true);
+    p2->setInGame(true);
     p1->setPixmap(Joueur::listeJoueur[0]->active_pers->pixmap());
     p2->setPixmap(Joueur::listeJoueur[1]->active_pers->pixmap());
     p1->setPos(0,scene->height()-200);
@@ -479,6 +482,7 @@ void Game::play(){
     scene->addItem(p2);
     focus->addPersonnage(p1);
     focus->addPersonnage(p2);
+    focus->setBallon(ballon);
     focus->setFlag(QGraphicsItem::ItemIsFocusable);
     focus->setFocus();
     score = new Score();
@@ -544,7 +548,6 @@ void Game::replayMenu(int i){
     replayButton->setPos(bxPos,byPos);
     connect(replayButton,SIGNAL(clicked()),this,SLOT(selectPersonnageMenu()));
     scene->addItem(replayButton);
-
     // create the quit button
     Button* quitButton = new Button(QString("Quit"));
     int qxPos = this->width()/2 - quitButton->boundingRect().width()/2;

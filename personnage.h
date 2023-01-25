@@ -23,6 +23,7 @@ public:
     int getUp() {return _up;};
     int getRight() {return _right;};
     int getDown() {return _down;};
+    void setInGame(int i) {inGame = i;};
     static std::map<std::string, int> getMap() {return _map;};
     static std::map<std::string, int> &setMap() {return _map;};
     static int getPrice(std::string name) {return _map[name];};
@@ -36,6 +37,7 @@ private:
     int _down;
     std::string _name;
     static std::map<std::string, int> _map;
+    int inGame = 0;
 
 };
 

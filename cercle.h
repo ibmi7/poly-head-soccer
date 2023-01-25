@@ -12,6 +12,7 @@ public:
     QVector<QPair<double,double>> getVit(){ return vit;};
     QVector<QPair<double,double>>& setVit(){ return vit;};
     double getMass() {return mass;};
+    virtual void keyPressEvent(int key) = 0;
 public slots:
     virtual void move()=0;
 protected:

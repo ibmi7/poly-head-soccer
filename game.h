@@ -20,7 +20,6 @@ public:
     Game(QWidget* parent=NULL);
 
     // public methods
-    void displayMainMenu();
     void replayMenu(int i);
     bool comparaison(std::string name,std::vector<std::string> equipe);
     void new_CSV(std::vector <Joueur> j);
@@ -37,6 +36,7 @@ public:
 
 public slots:
     //void start();
+    void displayMainMenu();
     void close_game();
 /*     void selectplayerMenu();
     void selectcompteMenu(); */

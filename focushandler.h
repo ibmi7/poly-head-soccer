@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include "personnage.h"
+#include "ballon.h"
 #include <QGraphicsEllipseItem>
 
 class FocusHandler : public QObject,public QGraphicsEllipseItem
@@ -11,9 +12,11 @@ class FocusHandler : public QObject,public QGraphicsEllipseItem
 public:
     FocusHandler();
     void addPersonnage(Personnage * pers){liste.push_back(pers);};
+    void setBallon(Ballon * ball){ballon = ball;};
     void keyPressEvent(QKeyEvent *event);
 private:
     QVector<Personnage *> liste;
+    Ballon * ballon;
 };
 
 #endif // FOCUSHANDLER_H

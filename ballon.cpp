@@ -30,6 +30,15 @@ Ballon::Ballon() : Cercle(){
     _end_sound->play();
 }
 
+void Ballon::keyPressEvent(int key)
+{
+    if (key == Qt::Key_Space){
+        vit[0].first = 0;
+        vit[0].second = 0;
+        setPos(1500/2,0);
+    }
+}
+
 void Ballon::move()
 {
     
@@ -48,7 +57,7 @@ void Ballon::move()
     if (vit[0].second>MAX_VY_BALL) vit[0].second = MAX_VY_BALL;
     if (vit[0].second<-MAX_VY_BALL) vit[0].second = -MAX_VY_BALL;
     setPos(x()+vit[0].first*temps,y()+vit[0].second*temps);
-    if (!scene()->collidingItems(this).isEmpty()){
+/*     if (!scene()->collidingItems(this).isEmpty()){
         //count-=50;
         //if (count<0) count = 100;
         QGraphicsItem * item = scene()->collidingItems(this).last();
@@ -96,7 +105,7 @@ void Ballon::move()
         }
     }
         //else : collision with the environment (lines)
-    else{
+    else{ */
         if (y()<= 0 || y()>= scene()->height()-200){
             // Update ball physics
             vit[0].second *= -0.98;
@@ -139,7 +148,7 @@ void Ballon::move()
                 }
         }
 
-    }
+    //}
     //check if out of bounds
 
 
