@@ -436,6 +436,7 @@ qrc_resources.cpp: resources.qrc \
 		Image/Environment/terrain_foot4.png \
 		Image/Environment/goal_6.png \
 		Image/Environment/terrain_foot5.png \
+		Image/Environment/back.jpg \
 		Image/Environment/filet_ness.png \
 		Image/Environment/terrain_foot8.png \
 		Image/Environment/grass.png \
@@ -476,6 +477,7 @@ moc_cercle.cpp: cercle.h \
 moc_focushandler.cpp: focushandler.h \
 		personnage.h \
 		cercle.h \
+		ballon.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/ibrahim/Documents/EISE4/C++/HeadSoccer2/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/ibrahim/Documents/EISE4/C++/HeadSoccer2 -I/home/ibrahim/Documents/EISE4/C++/HeadSoccer2 -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include focushandler.h -o moc_focushandler.cpp
@@ -524,7 +526,8 @@ cercle.o: cercle.cpp cercle.h
 
 focushandler.o: focushandler.cpp focushandler.h \
 		personnage.h \
-		cercle.h
+		cercle.h \
+		ballon.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o focushandler.o focushandler.cpp
 
 game.o: game.cpp game.h \

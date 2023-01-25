@@ -152,7 +152,7 @@ void Ballon::move()
     //check if out of bounds
 
 
-    if (x()<= 50 && y()>=scene()->height()-400){
+    if (x()<= 165 && y()>=scene()->height()-400){
         //QTimer * timer = new QTimer();
         setPos(50,y());
        // timer->setInterval(10000);
@@ -168,7 +168,7 @@ void Ballon::move()
         _goal_sound->play();
         //}
     }
-    if (x()>= scene()->width()-150 && y()>=scene()->height()-400){
+    if (x()>= scene()->width()-240 && y()>=scene()->height()-400){
         //QTimer * timer = new QTimer();
         setPos(1500-150,y());
         //timer->setInterval(10000);

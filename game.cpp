@@ -236,7 +236,7 @@ void Game::displayMainMenu(){
 void Game::selectPersonnageMenu(){
     scene->clear();
     scene->setSceneRect(0,0,1500,768);
-    scene->setBackgroundBrush(QImage(":/Image/Image/Environment/fond_ecran3.png"));
+    scene->setBackgroundBrush(QImage(":/Image/Image/Environment/back.jpg"));
     // create the title text
     QGraphicsTextItem* titleText = new QGraphicsTextItem(QString("Select your player"));
     QFont titleFont("comic sans",50);
@@ -456,9 +456,18 @@ void Game::play(){
     Personnage * p1 = new Personnage(Qt::Key_Left,Qt::Key_Up,Qt::Key_Right,Qt::Key_Down);
     Personnage * p2 = new Personnage(Qt::Key_Q,Qt::Key_Z,Qt::Key_D,Qt::Key_S);
     p1->setInGame(true);
+    p1->setPixmap(QPixmap(":/Image/Image/Player/p1_" + QString::fromStdString(Joueur::listeJoueur[0]->getEquipe()[0]) + ".png"));
     p2->setInGame(true);
-    p1->setPixmap(Joueur::listeJoueur[0]->active_pers->pixmap());
-    p2->setPixmap(Joueur::listeJoueur[1]->active_pers->pixmap());
+    p2->setPixmap(QPixmap(":/Image/Image/Player/p2_" + QString::fromStdString(Joueur::listeJoueur[1]->getEquipe()[0]) + ".png"));
+    if (!Joueur::listeJoueur[0]->active_pers->pixmap().isNull()){
+        qDebug() << "p1";
+        qDebug() << QString::fromStdString(Joueur::listeJoueur[0]->getEquipe()[0]);
+        p1->setPixmap(Joueur::listeJoueur[0]->active_pers->pixmap());
+    }
+    if (!Joueur::listeJoueur[1]->active_pers->pixmap().isNull()){
+        qDebug() << "p2";
+        p2->setPixmap(Joueur::listeJoueur[1]->active_pers->pixmap());
+    } 
     p1->setPos(0,scene->height()-200);
     p2->setPos(scene->width()-50,scene->height()-200);
     Ballon * ballon = new Ballon();
