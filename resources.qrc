@@ -1,0 +1,56 @@
+<RCC>
+    <qresource prefix="/Image">
+        <file>Image/Ball/ball1.png</file>
+        <file>Image/Ball/ball1_shaded.png</file>
+        <file>Image/Ball/ball2.png</file>
+        <file>Image/Ball/ball2_shaded.png</file>
+        <file>Image/Environment/goal_1.png</file>
+        <file>Image/Environment/goal_2.png</file>
+        <file>Image/Environment/grass.png</file>
+        <file>Image/Environment/sand.png</file>
+        <file>Image/Environment/terrain_foot2.png</file>
+        <file>Image/Environment/terrain_foot3.png</file>
+        <file>Image/Environment/rouge.png</file>
+        <file>Image/Environment/cage.png</file>
+        <file>Image/Environment/cage4.png</file>
+        <file>Image/Environment/terrain_foot4.png</file>
+        <file>Image/Environment/terrain_foot5.png</file>
+        <file>Image/Environment/goal_6.png</file>
+        <file>Image/Environment/go.png</file>
+        <file>Image/Environment/filet_ness.png</file>
+        <file>Image/Environment/filet_ness2.png</file>
+        <file>Image/Environment/filet_ness_ns.png</file>
+        <file>Image/Environment/filet_ness2_ns.png</file>
+        <file>Image/Environment/terrain_foot8.png</file>
+        <file>Image/Environment/fond_ecran2.png</file>
+        <file>Image/Environment/goal3.png</file>
+        <file>Image/Environment/fond_ecran3.png</file>
+        <file>Image/Player/p1_amerique.png</file>
+        <file>Image/Player/p2_amerique.png</file>
+        <file>Image/Player/p1_canada.png</file>
+        <file>Image/Player/p2_canada.png</file>
+        <file>Image/Player/p1_espagne.png</file>
+        <file>Image/Player/p2_espagne.png</file>
+        <file>Image/Player/p1_france.png</file>
+        <file>Image/Player/p2_france.png</file>
+        <file>Image/Player/p1_japon.png</file>
+        <file>Image/Player/p2_japon.png</file>
+        <file>Image/Player/p1_mex.png</file>
+        <file>Image/Player/p2_mex.png</file>
+        <file>Image/Player/p1_suisse.png</file>
+        <file>Image/Player/p2_suisse.png</file>
+        <file>Image/Player/p1_tunisie.png</file>
+        <file>Image/Player/p2_tunisie.png</file>
+        <file>Image/Player/p1_guinee.png</file>
+        <file>Image/Player/p2_guinee.png</file>
+        <file>Image/Player/p1_simpson.png</file>
+        <file>Image/Player/p2_simpson.png</file>
+        <file>Image/Player/p1_blond.png</file>
+        <file>Image/Player/p2_blond.png</file>
+    </qresource>
+    <qresource prefix="/Sounds">
+        <file>Sounds/intro.mp3</file>
+        <file>Sounds/coup_sifflet.mp3</file>
+        <file>Sounds/but.wav</file>
+    </qresource>
+</RCC>
