@@ -17,7 +17,7 @@ class Game: public QGraphicsView{
     Q_OBJECT
 public:
     // constructors
-    Game(QWidget* parent=NULL);
+    Game();
 
     // public methods
     void replayMenu(int i);
@@ -43,6 +43,7 @@ public slots:
     void buyPersonnage();
     void setPersonnage();
     void play();
+    void reset();
 
 private:
 };

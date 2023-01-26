@@ -93,16 +93,54 @@ int Joueur::buyPersonnage(std::string name)
     return 0;
 }
 
+void Joueur::reset()
+{
+    for (auto i : listeJoueur)
+    {
+        delete i;
+    }
+    //init from default file
+    std::string line;
+    std::ifstream myfile ("default.csv");
+    if (myfile.is_open()){
+        getline (myfile,line);
+        std::vector<std::string> v;
+        std::stringstream ss(line);
+        std::string token;
+        while(std::getline(ss, token, ' ')) {
+            v.push_back(token);
+        }
+        std::vector<std::string> equipe;
+        for(long unsigned int i = 2; i < v.size(); i++){
+            equipe.push_back(v[i]);
+        }
+        new Joueur(std::stoi(v[1]),v[0],equipe);
+
+        getline(myfile,line);
+        std::vector<std::string> v2;
+        std::stringstream ss2(line);
+        std::string token2;
+        while(std::getline(ss2, token2, ' ')) {
+            v2.push_back(token2);
+        }
+        std::vector<std::string> equipe2;
+        for(long unsigned int i = 2; i < v2.size(); i++){
+            equipe2.push_back(v2[i]);
+        }
+        new Joueur(std::stoi(v2[1]),v2[0],equipe2);
+    }
+    myfile.close();
+    Joueur::updateFile();
+}
 
 std::ostream& operator<<(std::ostream& os, Joueur j)
 {
     os << j.getName()<< std::endl;
     os << j.getSolde() << std::endl;
     os << j.getEquipe().size() << std::endl;
-    int taille = j.getEquipe().size();
-    for (int i = 0; i < j.getEquipe().size(); i++)
+    for (auto i : j.getEquipe())
     {
-        os << j.getEquipe()[i] << std::endl;
+        os << i << std::endl;
     }
     return os;
 }
