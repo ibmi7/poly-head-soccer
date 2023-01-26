@@ -236,11 +236,18 @@ void Game::displayMainMenu(){
 void Game::selectPersonnageMenu(){
     scene->clear();
     scene->setSceneRect(0,0,1500,768);
-    scene->setBackgroundBrush(QImage(":/Image/Image/Environment/back.jpg"));
+    QImage *bg = new QImage(":/Image/Image/Environment/back.jpg");
+    bg->scaled(1500,768,Qt::KeepAspectRatio);
+    scene->setBackgroundBrush(*bg);
     // create the title text
     QGraphicsTextItem* titleText = new QGraphicsTextItem(QString("Select your player"));
     QFont titleFont("comic sans",50);
     titleText->setFont(titleFont);
+    //change color
+    QBrush brush;
+    brush.setStyle(Qt::SolidPattern);
+    brush.setColor(Qt::white);
+    titleText->setDefaultTextColor(Qt::white);
     int txPos = scene->width()/2 - 200;
     int tyPos = 150;
     titleText->setPos(txPos,tyPos);
@@ -251,6 +258,7 @@ void Game::selectPersonnageMenu(){
     QGraphicsTextItem * messi = new QGraphicsTextItem(QString("Messi"));
     QFont messiFont("comic sans",30);
     messi->setFont(messiFont);
+    messi->setDefaultTextColor(Qt::white);
     int mxPos = scene->width()/2 - 500;
     int myPos = 300;
     messi->setPos(mxPos,myPos);
@@ -259,6 +267,7 @@ void Game::selectPersonnageMenu(){
     QGraphicsTextItem * ronaldo = new QGraphicsTextItem(QString("Ronaldo"));
     QFont ronaldoFont("comic sans",30);
     ronaldo->setFont(ronaldoFont);
+    ronaldo->setDefaultTextColor(Qt::white);
     int rxPos = scene->width()/2; + 100;
     int ryPos = 300;
     ronaldo->setPos(rxPos,ryPos);
@@ -285,6 +294,13 @@ void Game::selectPersonnageMenu(){
         connect(personnageButton,SIGNAL(clicked()),this,SLOT(setPersonnage()));
         scene->addItem(personnageButton);
         l++;
+    }
+
+    if (Joueur::listeJoueur[0]->active_pers!=nullptr){
+        Joueur::listeJoueur[0]->active_pers = nullptr;
+    }
+    if (Joueur::listeJoueur[1]->active_pers!=nullptr){
+     Joueur::listeJoueur[1]->active_pers = nullptr;
     }
 
     // create the play button
@@ -459,12 +475,12 @@ void Game::play(){
     p1->setPixmap(QPixmap(":/Image/Image/Player/p1_" + QString::fromStdString(Joueur::listeJoueur[0]->getEquipe()[0]) + ".png"));
     p2->setInGame(true);
     p2->setPixmap(QPixmap(":/Image/Image/Player/p2_" + QString::fromStdString(Joueur::listeJoueur[1]->getEquipe()[0]) + ".png"));
-    if (!Joueur::listeJoueur[0]->active_pers->pixmap().isNull()){
+    if (Joueur::listeJoueur[0]->active_pers != nullptr){
         qDebug() << "p1";
         qDebug() << QString::fromStdString(Joueur::listeJoueur[0]->getEquipe()[0]);
         p1->setPixmap(Joueur::listeJoueur[0]->active_pers->pixmap());
     }
-    if (!Joueur::listeJoueur[1]->active_pers->pixmap().isNull()){
+    if (Joueur::listeJoueur[1]->active_pers != nullptr){
         qDebug() << "p2";
         p2->setPixmap(Joueur::listeJoueur[1]->active_pers->pixmap());
     } 

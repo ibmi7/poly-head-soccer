@@ -24,6 +24,7 @@ public:
     int getRight() {return _right;};
     int getDown() {return _down;};
     void setInGame(int i) {inGame = i;};
+    int getInGame() {return inGame;};
     static std::map<std::string, int> getMap() {return _map;};
     static std::map<std::string, int> &setMap() {return _map;};
     static int getPrice(std::string name) {return _map[name];};

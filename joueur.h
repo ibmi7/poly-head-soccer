@@ -14,7 +14,8 @@ class Joueur
 {
 public:
     Joueur(int solde, std::string name, std::vector<std::string> equipe);
-    //typename pour les iterator de personnage
+    //destructor
+    ~Joueur();
     std::vector<std::string> getEquipe() {return equipe;};
     int getSolde() {return solde;};
     std::string getName() {return name;};

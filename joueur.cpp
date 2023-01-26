@@ -16,6 +16,7 @@ Joueur::Joueur(int solde, std::string name, std::vector<std::string> equipe)
     this->solde = solde;
     this->name = name;
     this->equipe = equipe;
+    active_pers = nullptr;
     listeJoueur.push_back(this);
     for (auto pers : Personnage::getMap())
     {
@@ -36,6 +37,11 @@ Joueur::Joueur(int solde, std::string name, std::vector<std::string> equipe)
     {
         std::cout << pers << std::endl;
     } 
+}
+
+Joueur::~Joueur()
+{
+    listeJoueur.erase(std::remove(listeJoueur.begin(), listeJoueur.end(), this), listeJoueur.end());
 }
 
 void Joueur::updateFile()
