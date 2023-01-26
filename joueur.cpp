@@ -55,7 +55,8 @@ void Joueur::clearListeJoueur()
 
 void Joueur::updateFile()
 {
-    std::ofstream myfile ("joueurs.csv");
+    std::ofstream myfile;
+    myfile.open("joueurs.csv",std::ofstream::out | std::ofstream::trunc);
     if (myfile.is_open())
     {
         for (auto i : Joueur::listeJoueur)
@@ -94,13 +95,18 @@ int Joueur::buyPersonnage(std::string name)
 
 void Joueur::reset()
 {
-    for (auto i : listeJoueur)
+    if (Joueur::listeJoueur.size() > 0)
     {
-        delete i;
+        for (auto i : listeJoueur)
+        {
+            delete i;
+        }
     }
+    assert(Joueur::listeJoueur.size() == 0);
     //init from default file
     std::string line;
-    std::ifstream myfile ("default.csv");
+    std::ifstream myfile;
+    myfile.open("default.csv");
     if (myfile.is_open()){
         getline (myfile,line);
         std::vector<std::string> v;

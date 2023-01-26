@@ -106,34 +106,36 @@ void Game::displayMainMenu(){
                   << std::endl ;
     }
     //initialize the players
-    std::string line;
-    std::ifstream myfile ("joueurs.csv");
-    if (myfile.is_open()){
-        getline (myfile,line);
-        std::vector<std::string> v;
-        std::stringstream ss(line);
-        std::string token;
-        while(std::getline(ss, token, ' ')) {
-            v.push_back(token);
-        }
-        std::vector<std::string> equipe;
-        for(long unsigned int i = 2; i < v.size(); i++){
-            equipe.push_back(v[i]);
-        }
-        new Joueur(std::stoi(v[1]),v[0],equipe);
+    if (Joueur::listeJoueur.size() == 0){
+        std::string line;
+        std::ifstream myfile ("joueurs.csv");
+        if (myfile.is_open()){
+            getline (myfile,line);
+            std::vector<std::string> v;
+            std::stringstream ss(line);
+            std::string token;
+            while(std::getline(ss, token, ' ')) {
+                v.push_back(token);
+            }
+            std::vector<std::string> equipe;
+            for(long unsigned int i = 2; i < v.size(); i++){
+                equipe.push_back(v[i]);
+            }
+            new Joueur(std::stoi(v[1]),v[0],equipe);
 
-        getline(myfile,line);
-        std::vector<std::string> v2;
-        std::stringstream ss2(line);
-        std::string token2;
-        while(std::getline(ss2, token2, ' ')) {
-            v2.push_back(token2);
+            getline(myfile,line);
+            std::vector<std::string> v2;
+            std::stringstream ss2(line);
+            std::string token2;
+            while(std::getline(ss2, token2, ' ')) {
+                v2.push_back(token2);
+            }
+            std::vector<std::string> equipe2;
+            for(long unsigned int i = 2; i < v2.size(); i++){
+                equipe2.push_back(v2[i]);
+            }
+            new Joueur(std::stoi(v2[1]),v2[0],equipe2);
         }
-        std::vector<std::string> equipe2;
-        for(long unsigned int i = 2; i < v2.size(); i++){
-            equipe2.push_back(v2[i]);
-        }
-        new Joueur(std::stoi(v2[1]),v2[0],equipe2);
     }
 }
 
@@ -455,4 +457,5 @@ void Game::replayMenu(int i){
 
 void Game::reset(){
     Joueur::reset();
+    displayMainMenu();
 }
