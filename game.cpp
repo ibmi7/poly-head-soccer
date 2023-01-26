@@ -429,6 +429,9 @@ void Game::play(){
 
 void Game::replayMenu(int i){
     std::cout << "je suis  dans replayMenu" << std::endl;
+    Joueur::listeJoueur[0]->active_pers = nullptr;
+    Joueur::listeJoueur[1]->active_pers = nullptr;
+    //delete all items from the scene
     scene->clear();
     scene->setSceneRect(0,0,1500,768);
     // update solde and file
