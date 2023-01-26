@@ -391,11 +391,11 @@ void Game::play(){
     if (Joueur::listeJoueur[0]->active_pers != nullptr){
         qDebug() << "p1";
         qDebug() << QString::fromStdString(Joueur::listeJoueur[0]->getEquipe()[0]);
-        p1->setPixmap(Joueur::listeJoueur[0]->active_pers->pixmap());
+        if (!Joueur::listeJoueur[0]->active_pers->pixmap().isNull()) p1->setPixmap(Joueur::listeJoueur[0]->active_pers->pixmap());
     }
     if (Joueur::listeJoueur[1]->active_pers != nullptr){
         qDebug() << "p2";
-        p2->setPixmap(Joueur::listeJoueur[1]->active_pers->pixmap());
+        if (!Joueur::listeJoueur[1]->active_pers->pixmap().isNull()) p2->setPixmap(Joueur::listeJoueur[1]->active_pers->pixmap());
     } 
     p1->setPos(0,scene->height()-200);
     p2->setPos(scene->width()-50,scene->height()-200);
