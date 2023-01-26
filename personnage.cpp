@@ -2,6 +2,10 @@
 #include "ballon.h"
 #include <QDebug>
 #include <cmath>
+#include <vector>
+#include <string>
+#include <fstream>
+#include <cstdlib>
 #define MAX_VX 7
 #define MAX_VY 10
 extern int count;
@@ -123,4 +127,14 @@ void Personnage::keyPressEvent(int key){
             setPos(scene()->width() - 150,y());
         }
     }
+}
+
+//operator <<
+std::ostream& operator<<(std::ostream& os, Personnage& p)
+{
+    os << "Mouvement gauche : " << p.getLeft() << std::endl;
+    os << "Mouvement droite : " << p.getRight() << std::endl;
+    os << "Mouvement haut : " << p.getUp() << std::endl;
+    os << "Mouvement bas : " << p.getDown() << std::endl;
+    return os;
 }

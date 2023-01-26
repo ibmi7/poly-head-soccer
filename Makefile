@@ -439,6 +439,7 @@ qrc_resources.cpp: resources.qrc \
 		Image/Environment/back.jpg \
 		Image/Environment/filet_ness.png \
 		Image/Environment/terrain_foot8.png \
+		Image/Environment/back.png \
 		Image/Environment/grass.png \
 		Image/Ball/ball2.png \
 		Image/Ball/ball1_shaded.png \

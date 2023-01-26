@@ -27,6 +27,7 @@ public:
     int getInGame() {return inGame;};
     static std::map<std::string, int> getMap() {return _map;};
     static std::map<std::string, int> &setMap() {return _map;};
+    static void clearMap() {_map.clear();};
     static int getPrice(std::string name) {return _map[name];};
 
 public slots:
@@ -41,5 +42,8 @@ private:
     int inGame = 0;
 
 };
+
+//operator<<
+std::ostream& operator<<(std::ostream& os, Personnage p);
 
 #endif // PERSONNAGE_H

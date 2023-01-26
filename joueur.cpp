@@ -41,7 +41,17 @@ Joueur::Joueur(int solde, std::string name, std::vector<std::string> equipe)
 
 Joueur::~Joueur()
 {
+    std::cout<<"destruction joueur"<<std::endl;
     listeJoueur.erase(std::remove(listeJoueur.begin(), listeJoueur.end(), this), listeJoueur.end());
+}
+
+void Joueur::clearListeJoueur()
+{
+    for (auto i : listeJoueur)
+    {
+        delete i;
+    }
+    listeJoueur.clear();
 }
 
 void Joueur::updateFile()

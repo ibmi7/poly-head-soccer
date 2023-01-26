@@ -1,5 +1,6 @@
 #include <QApplication>
 #include "game.h"
+#include <sstream>
 /*
  *Jeu Head Soccer
 
@@ -19,6 +20,9 @@ int main(int argc, char *argv[])
     assert(france->getDown() == Qt::Key_S);
     france->setInGame(1);
     assert(france->getInGame() == 1);
+    france->setInGame(0);
+    assert(france->getInGame() == 0);
+    std::cout << france << std::endl;
     delete france;
     std::cout << "Test de la classe Personnage OK" << std::endl;
     // test de la classe Joueur

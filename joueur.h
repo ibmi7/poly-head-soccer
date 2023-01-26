@@ -22,6 +22,7 @@ public:
     void setSolde(int solde) {this->solde = solde;};
     void setEquipe(std::string equipe) {this->equipe.push_back(equipe);};    
     static std::vector<Joueur*> listeJoueur;
+    static void clearListeJoueur();
     Personnage* active_pers;
     std::string getNom() {return (name);};
     std::vector<std::string> getNotOwned() {return notOwned;};

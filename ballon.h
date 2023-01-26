@@ -9,6 +9,7 @@ class Ballon: public Cercle
     Q_OBJECT
 public:
     Ballon();
+    ~Ballon();
     void keyPressEvent(int key);
 public slots:
     void move();

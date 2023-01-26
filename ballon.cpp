@@ -30,6 +30,12 @@ Ballon::Ballon() : Cercle(){
     _end_sound->play();
 }
 
+Ballon::~Ballon(){
+    std::cout << "Ballon deleted" << std::endl;
+    delete _goal_sound;
+    delete _end_sound;
+}
+
 void Ballon::keyPressEvent(int key)
 {
     if (key == Qt::Key_Space){

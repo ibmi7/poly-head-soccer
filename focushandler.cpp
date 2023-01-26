@@ -1,9 +1,16 @@
 #include "focushandler.h"
-
+#include <cstdlib>
+#include <iostream>
 
 FocusHandler::FocusHandler()
 {
 
+}
+
+FocusHandler::~FocusHandler()
+{
+    std::cout << "destruction focushandler" << std::endl;
+    liste.clear();
 }
 
 void FocusHandler::keyPressEvent(QKeyEvent *event)

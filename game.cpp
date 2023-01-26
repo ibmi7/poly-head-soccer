@@ -27,47 +27,9 @@
 
 QGraphicsView * view;
 
-/* int choix_j1 = 0;
-int choix_j2 = 0;
-int france_choose = 0;
-int guinee_choose = 0;
-int mexique_choose = 0;
-int american_choose = 0;
-
-//int choix=0;
-std::vector<Joueur> joueurs;    // liste des joueurs
-std::vector<std::string> joueurs_j1;    // liste des joueurs du compte 1 selectionnés
-std::vector<std::string> joueurs_j2;    // liste des joueurs du compte 2 selectionnés
-int indice_j1 = 0;
-int indice_j2 = 0;
-int j=0;
-int p=0;
-typedef struct{
-    int prix;
-    std::string name; 
-} joueur_dispo;
-
-joueur_dispo joueur1 = {50,"france"};
-joueur_dispo joueur2 = {250,"guinee"};
-joueur_dispo joueur3 = {150,"mexique"};
-joueur_dispo joueur4 = {200,"american"};
-std::vector<joueur_dispo> joueurs_dispo = {joueur1,joueur2,joueur3,joueur4};   // liste des joueurs disponibles
-
-
-std::ostream& operator<<(std::ostream& os, std::vector<joueur_dispo> j){
-    for(int i=0;i<j.size();i++){
-        os << j[i].name << " " << j[i].prix << std::endl;
-    }
-    return os;
-} */
 
 
 Game::Game(QWidget *parent){
-    // set up the screen
-    //setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    //setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    //setFixedSize(1024,768);
-
     // set up the scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,1500,768);
@@ -79,65 +41,13 @@ Game::Game(QWidget *parent){
     view->show();
 }
 
-/* void Game::start(){
-    // clear the screen
-    scene->clear();
-    scene->setSceneRect(0,0,1500,768);
-    //setBackgroundBrush(QBrush(QImage(":/Image/Image/Environment/rouge.png")));
-    //scene->setBackgroundBrush(QImage(":/Image/Environment/terrain_foot3.png"));
-    QImage * bg = new QImage(":/Image/Image/Environment/terrain_foot8.png");
-    *bg = bg->scaled(1500,768);
-    scene->setBackgroundBrush(*bg);
-    Personnage * pers2 = new Personnage(Qt::Key_Left,Qt::Key_Up,Qt::Key_Right,Qt::Key_Down);
-    Personnage * pers = new Personnage(Qt::Key_Q,Qt::Key_Z,Qt::Key_D,Qt::Key_S);
-    Ballon * ballon = new Ballon();
-    FocusHandler * focus = new FocusHandler();
-    QGraphicsPixmapItem * cage1 = new QGraphicsPixmapItem();
-    QGraphicsPixmapItem * cage2 = new QGraphicsPixmapItem();
-    QPixmap * cage1_scaled = new QPixmap(":/Image/Image/Environment/filet_ness2_ns.png");
-    QPixmap * cage2_scaled = new QPixmap(":/Image/Image/Environment/goal_1.png");
-    cage1_scaled->scaled(50,100);
-    ballon->setPos(scene->width()/2,-scene->height());
-    if(choix_j1==0) pers->setPixmap(QPixmap(":/Image/Image/Player/p1_blue.png"));
-    if(choix_j1==1) pers->setPixmap(QPixmap(":/Image/Image/Player/p1_black3.png"));
-    if(choix_j1==2) pers->setPixmap(QPixmap(":/Image/Image/Player/p1_mex.png"));
-    if(choix_j1==3) pers->setPixmap(QPixmap(":/Image/Image/Player/p1_blond.png"));
-    if(choix_j2==0) pers2->setPixmap(QPixmap(":/Image/Image/Player/p2_blue.png"));
-    if(choix_j2==1) pers2->setPixmap(QPixmap(":/Image/Image/Player/p2_black3.png"));
-    if(choix_j2==2) pers2->setPixmap(QPixmap(":/Image/Image/Player/p2_mex.png"));
-    if(choix_j2==3) pers2->setPixmap(QPixmap(":/Image/Image/Player/p2_blond.png"));
-    cage1->setPixmap(*cage1_scaled);
-    cage2->setPixmap(QPixmap(":/Image/Image/Environment/filet_ness_ns.png"));
-    pers->setPos(0,scene->height()-200);
-    pers2->setPos(scene->width()-50,scene->height()-200);
-    focus->setPos(-scene->width(),-scene->height());
-    cage1->setPos(50,scene->height()/2);
-    cage2->setPos(scene->width()-200,scene->height()/2);
-    focus->addPersonnage(pers);
-    focus->addPersonnage(pers2);
-    //add the item to the scene
-    scene->addItem(ballon);
-    scene->addItem(pers);
-    scene->addItem(pers2);
-    scene->addItem(cage1);
-    scene->addItem(cage2);
-    scene->addItem(focus);
-    // make personnage focusable
-    focus->setFlag(QGraphicsItem::ItemIsFocusable);
-    pers2->setFlag(QGraphicsItem::ItemIsFocusable);
-    focus->setFocus();
-    //add a view
-    //QGraphicsView * view = new QGraphicsView(scene);
-    score = new Score();
-    scene->addItem(score);
-    view->show();
-
-
-} */
-
-
 void Game::close_game(){
-    exit(0);
+    for (int i = 0; i < scene->items().size(); i++){
+        scene->removeItem(scene->items()[i]);
+    }
+    delete scene;
+    Joueur::clearListeJoueur();
+    QApplication::quit();
 }
 
 void Game::displayMainMenu(){
@@ -171,13 +81,7 @@ void Game::displayMainMenu(){
     quitButton->setPos(qxPos,qyPos);
     connect(quitButton,SIGNAL(clicked()),this,SLOT(close_game()));
     scene->addItem(quitButton);
-/*     // create the test button
-    Button* testButton = new Button(QString("Test"));
-    int txPos = scene->width()/2 -100;// quitButton->boundingRect().width()/2;
-    int tyPos = 200;
-    testButton->setPos(txPos,tyPos);
-    connect(testButton,SIGNAL(clicked()),this,SLOT(selectPersonnageMenu()));
-    scene->addItem(testButton); */
+
     //initialize the map of personnage
     std::string line2;
     std::ifstream myfile2 ("liste_players.csv");
@@ -236,12 +140,12 @@ void Game::displayMainMenu(){
 void Game::selectPersonnageMenu(){
     scene->clear();
     scene->setSceneRect(0,0,1500,768);
-    QImage *bg = new QImage(":/Image/Image/Environment/back.jpg");
+    QImage *bg = new QImage(":/Image/Image/Environment/back.png");
     bg->scaled(1500,768,Qt::KeepAspectRatio);
     scene->setBackgroundBrush(*bg);
     // create the title text
     QGraphicsTextItem* titleText = new QGraphicsTextItem(QString("Select your player"));
-    QFont titleFont("comic sans",50);
+    QFont titleFont("comic sans",30);
     titleText->setFont(titleFont);
     //change color
     QBrush brush;
@@ -255,12 +159,12 @@ void Game::selectPersonnageMenu(){
     //unfocus player
 
     // add the players choice
-    QGraphicsTextItem * messi = new QGraphicsTextItem(QString("Messi"));
+/*     QGraphicsTextItem * messi = new QGraphicsTextItem(QString("Messi"));
     QFont messiFont("comic sans",30);
     messi->setFont(messiFont);
     messi->setDefaultTextColor(Qt::white);
-    int mxPos = scene->width()/2 - 500;
-    int myPos = 300;
+    int mxPos = scene->width()/2 - 300;
+    int myPos = 200;
     messi->setPos(mxPos,myPos);
     scene->addItem(messi);
 
@@ -269,27 +173,47 @@ void Game::selectPersonnageMenu(){
     ronaldo->setFont(ronaldoFont);
     ronaldo->setDefaultTextColor(Qt::white);
     int rxPos = scene->width()/2; + 100;
-    int ryPos = 300;
+    int ryPos = 200;
     ronaldo->setPos(rxPos,ryPos);
-    scene->addItem(ronaldo);
+    scene->addItem(ronaldo); */
     // add the personnage button
     int l = 0;
+    int c = 0;
+    int p = 0;
     for (auto i : Joueur::listeJoueur[0]->getEquipe()){
         Button* personnageButton = new Button(QString::fromStdString(i));
         personnageButton->setIndex(0);
-        int pxPos = scene->width()/2 - 500;
-        int pyPos = 500 + l*50;
+        if (l%2 == 0){
+            c = 0;
+            p++;
+        }
+        else{
+            c = 1;
+        }
+        int pxPos = scene->width()/2 - 600 + c*200;
+        int pyPos = 400 + p*50;
+/*         int pxPos = scene->width()/2 - 300;
+        int pyPos = 300 + l*50; */
         personnageButton->setPos(pxPos,pyPos);
         connect(personnageButton,SIGNAL(clicked()),this,SLOT(setPersonnage()));
         scene->addItem(personnageButton);
         l++;
     }
     l = 0;
+    c = 0;
+    p = 0;
     for (auto i : Joueur::listeJoueur[1]->getEquipe()){
         Button* personnageButton = new Button(QString::fromStdString(i));
         personnageButton->setIndex(1);
-        int pxPos = scene->width()/2 + 100;
-        int pyPos = 500 + l*50;
+        if (l%2 == 0){
+            c = 0;
+            p++;
+        }
+        else{
+            c = 1;
+        }
+        int pxPos = scene->width()/2 + 200 + c*200;
+        int pyPos = 400 + p*50;
         personnageButton->setPos(pxPos,pyPos);
         connect(personnageButton,SIGNAL(clicked()),this,SLOT(setPersonnage()));
         scene->addItem(personnageButton);
@@ -305,7 +229,7 @@ void Game::selectPersonnageMenu(){
 
     // create the play button
     Button* playButton = new Button(QString("Play"));
-    int pxPos = scene->width()/2 -100;// quitButton->boundingRect().width()/2;
+    int pxPos = scene->width()/2 -200;// quitButton->boundingRect().width()/2;
     int pyPos = 700;
     playButton->setPos(pxPos,pyPos);
     connect(playButton,SIGNAL(clicked()),this,SLOT(play()));
@@ -313,8 +237,8 @@ void Game::selectPersonnageMenu(){
 
     // create the market button
     Button* marketButton = new Button(QString("Market"));
-    mxPos = scene->width()/2 + 100;// quitButton->boundingRect().width()/2;
-    myPos = 700;
+    int mxPos = scene->width()/2;// quitButton->boundingRect().width()/2;
+    int myPos = 700;
     marketButton->setPos(mxPos,myPos);
     connect(marketButton,SIGNAL(clicked()),this,SLOT(marketMenu()));
     scene->addItem(marketButton);
@@ -327,17 +251,29 @@ void Game::setPersonnage(){
     QString namePersonnage = name->toPlainText();
     std::string namePersonnageS = name->toPlainText().toStdString();
     if (buttonSender->getIndex() == 0){
+        if (Joueur::listeJoueur[0]->active_pers!=nullptr){
+            if (!Joueur::listeJoueur[0]->active_pers->pixmap().isNull()){
+                scene->removeItem(Joueur::listeJoueur[0]->active_pers);
+                Joueur::listeJoueur[0]->active_pers = nullptr;
+            }
+        }
         Joueur::listeJoueur[0]->active_pers = (new Personnage(Qt::Key_Left,Qt::Key_Up,Qt::Key_Right,Qt::Key_Down));
         QString path = ":/Image/Image/Player/p1_" + namePersonnage + ".png";
         Joueur::listeJoueur[0]->active_pers->setPixmap(QPixmap(path));
-        Joueur::listeJoueur[0]->active_pers->setPos(scene->width()/2 - 500,350);
+        Joueur::listeJoueur[0]->active_pers->setPos(scene->width()/2 - 150,300);
         scene->addItem(Joueur::listeJoueur[0]->active_pers);
     }
     else if (buttonSender->getIndex() == 1){
+        if (Joueur::listeJoueur[1]->active_pers!=nullptr){
+            if (!Joueur::listeJoueur[1]->active_pers->pixmap().isNull()){
+                scene->removeItem(Joueur::listeJoueur[1]->active_pers);
+                Joueur::listeJoueur[1]->active_pers = nullptr;
+            }
+        }
         Joueur::listeJoueur[1]->active_pers = (new Personnage(Qt::Key_Q,Qt::Key_Z,Qt::Key_D,Qt::Key_S));
         QString path = ":/Image/Image/Player/p2_" + namePersonnage + ".png";
         Joueur::listeJoueur[1]->active_pers->setPixmap(QPixmap(path));
-        Joueur::listeJoueur[1]->active_pers->setPos(scene->width()/2 + 100,350);
+        Joueur::listeJoueur[1]->active_pers->setPos(scene->width()/2 + 100,300);
         scene->addItem(Joueur::listeJoueur[1]->active_pers);
     }
 }
