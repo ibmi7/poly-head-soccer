@@ -5,9 +5,8 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
-#include <filesystem>
-
-using recursive_directory_iterator = std::filesystem::recursive_directory_iterator;
+#include <iostream>
+#include <sstream>
 
 std::vector<Joueur*> Joueur::listeJoueur;
 
