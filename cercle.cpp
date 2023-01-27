@@ -5,8 +5,6 @@
 int count = 0;
 
 Cercle::Cercle(){
-    //dessiner le Cercle
-    //setRect(-50,-50,25,25);
     //coordonnées
     vit.push_back(qMakePair(0,0));
     acc.push_back(qMakePair(0,0));
