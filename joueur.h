@@ -44,10 +44,13 @@ public:
     Personnage* active_pers;
     std::string getNom() {return (name);};
     std::vector<std::string> getNotOwned() {return notOwned;};
+    std::string getActiveName() {return active_pers_name;};
+    void setActiveName(std::string name) {active_pers_name = name;};
     static void reset();
     int buyPersonnage(std::string name);
     static void updateFile();
 private:
+    std::string active_pers_name;
     std::vector<std::string> equipe;
     std::vector<std::string> notOwned;
     int solde;

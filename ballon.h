@@ -23,10 +23,6 @@ public:
     */
     Ballon();
     /**
-     * @brief Destructeur de la classe Ballon
-    */
-    ~Ballon();
-    /**
      * @brief Méthode qui permet de réinitialiser la position du ballon
     */
     void keyPressEvent(int key);

@@ -46,12 +46,36 @@ public:
     Score * score;
 
 public slots:
+    /**
+     * @brief displayMainMenu
+     * @details Cette méthode permet d'afficher le menu principal. On y initialise également les joueurs et les personnages.
+    **/
     void displayMainMenu();
     void close_game();
+    /**
+     * @brief selectPersonnageMenu
+     * @details Cette méthode permet d'afficher le menu de sélection des personnages.
+    **/
     void selectPersonnageMenu();
+    /**
+     * @brief marketMenu
+     * @details Cette méthode permet d'afficher le menu du marché. 
+    **/
     void marketMenu();
+    /**
+     * @brief buyPersonnage
+     * @details Cette méthode permet d'acheter un personnage. 
+    **/
     void buyPersonnage();
+    /**
+     * @brief setPersonnage
+     * @details Cette méthode permet de définir le personnage choisi par le joueur. 
+    **/
     void setPersonnage();
+    /**
+     * @brief play
+     * @details Cette méthode permet de lancer la partie, en initialisant les personnages et le ballon, ainsi que le terrain.
+    **/
     void play();
     void reset();
 
