@@ -1,3 +1,13 @@
+/**
+ * @file joueur.h
+ * @brief The Joueur class
+ * @version 1.0
+ * @date 2023-01-27
+ * @author Ibrahim Minthe & Youssef Skhiri
+ * @version 1.0
+*/
+
+
 #ifndef JOUEUR_H
 #define JOUEUR_H
 #include <QObject>
@@ -13,8 +23,16 @@
 class Joueur
 {
 public:
+    /**
+     * @brief Constructeur de la classe Joueur
+     * @param solde
+     * @param name
+     * @param equipe
+    */
     Joueur(int solde, std::string name, std::vector<std::string> equipe);
-    //destructor
+    /**
+     * @brief Destructeur de la classe Joueur
+    */
     ~Joueur();
     std::vector<std::string> getEquipe() {return equipe;};
     int getSolde() {return solde;};
