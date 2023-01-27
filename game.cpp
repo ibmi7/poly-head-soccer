@@ -390,15 +390,6 @@ void Game::play(){
     p2->setPixmap(QPixmap(":/Image/Image/Player/p2_" + QString::fromStdString(Joueur::listeJoueur[1]->getEquipe()[0]) + ".png"));
     if (Joueur::listeJoueur[0]->getActiveName() != "") p1->setPixmap(QPixmap(":/Image/Image/Player/p1_" + QString::fromStdString(Joueur::listeJoueur[0]->getActiveName()) + ".png"));
     if (Joueur::listeJoueur[1]->getActiveName() != "") p2->setPixmap(QPixmap(":/Image/Image/Player/p2_" + QString::fromStdString(Joueur::listeJoueur[1]->getActiveName()) + ".png"));
-    /* if (Joueur::listeJoueur[0]->active_pers != nullptr){
-        qDebug() << "p1";
-        qDebug() << QString::fromStdString(Joueur::listeJoueur[0]->getEquipe()[0]);
-        if (!Joueur::listeJoueur[0]->active_pers->pixmap().isNull()) p1->setPixmap(Joueur::listeJoueur[0]->active_pers->pixmap());
-    }
-    if (Joueur::listeJoueur[1]->active_pers != nullptr){
-        qDebug() << "p2";
-        if (!Joueur::listeJoueur[1]->active_pers->pixmap().isNull()) p2->setPixmap(Joueur::listeJoueur[1]->active_pers->pixmap());
-    }  */
     p1->setPos(0,scene->height()-200);
     p2->setPos(scene->width()-50,scene->height()-200);
     Ballon * ballon = new Ballon();
