@@ -29,7 +29,7 @@ QGraphicsView * view;
 
 
 
-Game::Game(){
+Game::Game(QWidget* parent){
     // set up the scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,1500,768);

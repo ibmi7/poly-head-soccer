@@ -29,7 +29,7 @@ public:
     /**
      * @brief Constructeur de la classe Game
     */
-    Game();
+    Game(QWidget* parent=NULL);
 
     void replayMenu(int i);
     bool comparaison(std::string name,std::vector<std::string> equipe);
