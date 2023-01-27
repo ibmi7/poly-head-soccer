@@ -1,0 +1,310 @@
+\hypertarget{class_game}{}\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+
+
+Inheritance diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{class_game__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_game__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_af74fd203e3b31917ca9d4769fa608c48}{display\+Main\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_game_a6725aa2ed882df476389aee4dc37a9dd}{close\+\_\+game}} ()
+\item 
+void \mbox{\hyperlink{class_game_a064c6b9107c0c4f7164bde31f0b6c712}{select\+Personnage\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_game_a3687106ca491158b437683174de720c0}{market\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_game_a7d9e48887a75f9c62cc5bf1543d041d4}{buy\+Personnage}} ()
+\item 
+void \mbox{\hyperlink{class_game_a3b0e2fcafab02f4ff9517c515e719966}{set\+Personnage}} ()
+\item 
+void \mbox{\hyperlink{class_game_aa333825d0bca80e91e53c7e23f053405}{play}} ()
+\item 
+void \mbox{\hyperlink{class_game_a39bb2fd26b5ea6b164f28f9f6723582e}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_game}{Game}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ab39e1e3609ef6a3ffae64d0dcdd39068}{replay\+Menu}} (int i)
+\item 
+bool \mbox{\hyperlink{class_game_ac8b9b6f59bdde1ba96a08dcb7dc06931}{comparaison}} (std\+::string name, std\+::vector$<$ std\+::string $>$ equipe)
+\item 
+void \mbox{\hyperlink{class_game_acb897ca547283c2270a76106df732130}{new\+\_\+\+CSV}} (std\+::vector$<$ \mbox{\hyperlink{class_joueur}{Joueur}} $>$ j)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QGraphics\+Scene $\ast$ \mbox{\hyperlink{class_game_a8119e3b9a632906c6808fa294b46a92a}{scene}}
+\item 
+\mbox{\hyperlink{class_ballon}{Ballon}} $\ast$ \mbox{\hyperlink{class_game_aa0baa1d9aa203183d51c2a3647cdbfad}{ballon}}
+\item 
+\mbox{\hyperlink{class_personnage}{Personnage}} $\ast$ \mbox{\hyperlink{class_game_a18721d6edf5a1fb03423b495a3cfbec8}{personnage}}
+\item 
+\mbox{\hyperlink{class_focus_handler}{Focus\+Handler}} $\ast$ \mbox{\hyperlink{class_game_aaa2455e26e3454423e4fd3272ad8623c}{f}}
+\item 
+\mbox{\hyperlink{class_score}{Score}} $\ast$ \mbox{\hyperlink{class_game_ad195acc6b5ee17a5a07fea0b7b4ff5e2}{score}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \mbox{\hyperlink{class_game}{Game}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a7d9e48887a75f9c62cc5bf1543d041d4}\label{class_game_a7d9e48887a75f9c62cc5bf1543d041d4}} 
+\index{Game@{Game}!buyPersonnage@{buyPersonnage}}
+\index{buyPersonnage@{buyPersonnage}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{buyPersonnage}{buyPersonnage}}
+{\footnotesize\ttfamily void Game\+::buy\+Personnage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a7d9e48887a75f9c62cc5bf1543d041d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a7d9e48887a75f9c62cc5bf1543d041d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a6725aa2ed882df476389aee4dc37a9dd}\label{class_game_a6725aa2ed882df476389aee4dc37a9dd}} 
+\index{Game@{Game}!close\_game@{close\_game}}
+\index{close\_game@{close\_game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{close\_game}{close\_game}}
+{\footnotesize\ttfamily void Game\+::close\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_game_a6725aa2ed882df476389aee4dc37a9dd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a6725aa2ed882df476389aee4dc37a9dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_ac8b9b6f59bdde1ba96a08dcb7dc06931}\label{class_game_ac8b9b6f59bdde1ba96a08dcb7dc06931}} 
+\index{Game@{Game}!comparaison@{comparaison}}
+\index{comparaison@{comparaison}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{comparaison()}{comparaison()}}
+{\footnotesize\ttfamily bool Game\+::comparaison (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::vector$<$ std\+::string $>$}]{equipe }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_af74fd203e3b31917ca9d4769fa608c48}\label{class_game_af74fd203e3b31917ca9d4769fa608c48}} 
+\index{Game@{Game}!displayMainMenu@{displayMainMenu}}
+\index{displayMainMenu@{displayMainMenu}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{displayMainMenu}{displayMainMenu}}
+{\footnotesize\ttfamily void Game\+::display\+Main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_af74fd203e3b31917ca9d4769fa608c48_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_game_af74fd203e3b31917ca9d4769fa608c48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a3687106ca491158b437683174de720c0}\label{class_game_a3687106ca491158b437683174de720c0}} 
+\index{Game@{Game}!marketMenu@{marketMenu}}
+\index{marketMenu@{marketMenu}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{marketMenu}{marketMenu}}
+{\footnotesize\ttfamily void Game\+::market\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a3687106ca491158b437683174de720c0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a3687106ca491158b437683174de720c0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_acb897ca547283c2270a76106df732130}\label{class_game_acb897ca547283c2270a76106df732130}} 
+\index{Game@{Game}!new\_CSV@{new\_CSV}}
+\index{new\_CSV@{new\_CSV}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{new\_CSV()}{new\_CSV()}}
+{\footnotesize\ttfamily void Game\+::new\+\_\+\+CSV (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_joueur}{Joueur}} $>$}]{j }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_aa333825d0bca80e91e53c7e23f053405}\label{class_game_aa333825d0bca80e91e53c7e23f053405}} 
+\index{Game@{Game}!play@{play}}
+\index{play@{play}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{play}{play}}
+{\footnotesize\ttfamily void Game\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_game_aa333825d0bca80e91e53c7e23f053405_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_aa333825d0bca80e91e53c7e23f053405_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_ab39e1e3609ef6a3ffae64d0dcdd39068}\label{class_game_ab39e1e3609ef6a3ffae64d0dcdd39068}} 
+\index{Game@{Game}!replayMenu@{replayMenu}}
+\index{replayMenu@{replayMenu}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{replayMenu()}{replayMenu()}}
+{\footnotesize\ttfamily void Game\+::replay\+Menu (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_ab39e1e3609ef6a3ffae64d0dcdd39068_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{class_game_ab39e1e3609ef6a3ffae64d0dcdd39068_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a39bb2fd26b5ea6b164f28f9f6723582e}\label{class_game_a39bb2fd26b5ea6b164f28f9f6723582e}} 
+\index{Game@{Game}!reset@{reset}}
+\index{reset@{reset}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily void Game\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a39bb2fd26b5ea6b164f28f9f6723582e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_game_a39bb2fd26b5ea6b164f28f9f6723582e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a064c6b9107c0c4f7164bde31f0b6c712}\label{class_game_a064c6b9107c0c4f7164bde31f0b6c712}} 
+\index{Game@{Game}!selectPersonnageMenu@{selectPersonnageMenu}}
+\index{selectPersonnageMenu@{selectPersonnageMenu}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{selectPersonnageMenu}{selectPersonnageMenu}}
+{\footnotesize\ttfamily void Game\+::select\+Personnage\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a064c6b9107c0c4f7164bde31f0b6c712_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a064c6b9107c0c4f7164bde31f0b6c712_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a3b0e2fcafab02f4ff9517c515e719966}\label{class_game_a3b0e2fcafab02f4ff9517c515e719966}} 
+\index{Game@{Game}!setPersonnage@{setPersonnage}}
+\index{setPersonnage@{setPersonnage}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setPersonnage}{setPersonnage}}
+{\footnotesize\ttfamily void Game\+::set\+Personnage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_game_a3b0e2fcafab02f4ff9517c515e719966_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a3b0e2fcafab02f4ff9517c515e719966_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_aa0baa1d9aa203183d51c2a3647cdbfad}\label{class_game_aa0baa1d9aa203183d51c2a3647cdbfad}} 
+\index{Game@{Game}!ballon@{ballon}}
+\index{ballon@{ballon}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{ballon}{ballon}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ballon}{Ballon}}$\ast$ Game\+::ballon}
+
+\mbox{\Hypertarget{class_game_aaa2455e26e3454423e4fd3272ad8623c}\label{class_game_aaa2455e26e3454423e4fd3272ad8623c}} 
+\index{Game@{Game}!f@{f}}
+\index{f@{f}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_focus_handler}{Focus\+Handler}}$\ast$ Game\+::f}
+
+\mbox{\Hypertarget{class_game_a18721d6edf5a1fb03423b495a3cfbec8}\label{class_game_a18721d6edf5a1fb03423b495a3cfbec8}} 
+\index{Game@{Game}!personnage@{personnage}}
+\index{personnage@{personnage}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{personnage}{personnage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_personnage}{Personnage}}$\ast$ Game\+::personnage}
+
+\mbox{\Hypertarget{class_game_a8119e3b9a632906c6808fa294b46a92a}\label{class_game_a8119e3b9a632906c6808fa294b46a92a}} 
+\index{Game@{Game}!scene@{scene}}
+\index{scene@{scene}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily QGraphics\+Scene$\ast$ Game\+::scene}
+
+\mbox{\Hypertarget{class_game_ad195acc6b5ee17a5a07fea0b7b4ff5e2}\label{class_game_ad195acc6b5ee17a5a07fea0b7b4ff5e2}} 
+\index{Game@{Game}!score@{score}}
+\index{score@{score}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_score}{Score}}$\ast$ Game\+::score}
+

@@ -1,0 +1,15 @@
+<map id="Game::buyPersonnage" name="Game::buyPersonnage">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,160,132"/>
+<area shape="rect" id="node2" href="$class_button.html#a3bdc20398436629c8c70ad252088f1fd" title=" " alt="" coords="219,5,334,31"/>
+<area shape="rect" id="node3" href="$class_button.html#a4bff1380792d2a861a3056ffae10726b" title=" " alt="" coords="884,75,1001,100"/>
+<area shape="rect" id="node4" href="$class_game.html#a3687106ca491158b437683174de720c0" title=" " alt="" coords="208,132,345,157"/>
+<area shape="rect" id="node5" href="$class_personnage.html#af94c5ac0c3d9b56d50e77ec3161fc905" title=" " alt="" coords="421,157,567,183"/>
+<area shape="rect" id="node6" href="$class_game.html#a064c6b9107c0c4f7164bde31f0b6c712" title=" " alt="" coords="393,207,595,232"/>
+<area shape="rect" id="node11" href="$class_button.html#a2ad6b5db6cdd29d372c00996046c99b2" title=" " alt="" coords="660,107,777,132"/>
+<area shape="rect" id="node7" href="$class_game.html#aa333825d0bca80e91e53c7e23f053405" title=" " alt="" coords="674,231,763,256"/>
+<area shape="rect" id="node12" href="$class_game.html#a3b0e2fcafab02f4ff9517c515e719966" title=" " alt="" coords="643,156,795,181"/>
+<area shape="rect" id="node8" href="$class_focus_handler.html#a090b5fc8e189c1e5f83a5d60886b2df7" title="Méthode qui permet d&#39;ajouter un personnage à la liste." alt="" coords="843,243,1043,268"/>
+<area shape="rect" id="node9" href="$class_focus_handler.html#ae67ea2f0a6838a2debba5aca601cd2ae" title="Méthode qui de définir le ballon." alt="" coords="861,292,1025,317"/>
+<area shape="rect" id="node10" href="$class_personnage.html#abae398c5e3e512ea079f7f09f5577894" title=" " alt="" coords="861,193,1024,219"/>
+<area shape="rect" id="node13" href="$class_button.html#aea47a057538f088d94bb1f2be391a368" title=" " alt="" coords="887,144,998,169"/>
+</map>

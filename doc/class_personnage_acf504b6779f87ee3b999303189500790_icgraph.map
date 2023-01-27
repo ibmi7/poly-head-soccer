@@ -1,0 +1,5 @@
+<map id="Personnage::setMap" name="Personnage::setMap">
+<area shape="rect" id="node1" title=" " alt="" coords="363,5,505,31"/>
+<area shape="rect" id="node2" href="$class_game.html#af74fd203e3b31917ca9d4769fa608c48" title=" " alt="" coords="148,5,315,31"/>
+<area shape="rect" id="node3" href="$class_game.html#a39bb2fd26b5ea6b164f28f9f6723582e" title=" " alt="" coords="5,5,100,31"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Game::play" name="Game::play">
+<area shape="rect" id="node1" title=" " alt="" coords="5,55,95,80"/>
+<area shape="rect" id="node2" href="$class_focus_handler.html#a090b5fc8e189c1e5f83a5d60886b2df7" title="Méthode qui permet d&#39;ajouter un personnage à la liste." alt="" coords="143,5,343,31"/>
+<area shape="rect" id="node3" href="$class_focus_handler.html#ae67ea2f0a6838a2debba5aca601cd2ae" title="Méthode qui de définir le ballon." alt="" coords="161,55,325,80"/>
+<area shape="rect" id="node4" href="$class_personnage.html#abae398c5e3e512ea079f7f09f5577894" title=" " alt="" coords="161,104,324,129"/>
+</map>

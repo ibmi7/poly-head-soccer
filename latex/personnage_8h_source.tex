@@ -1,0 +1,56 @@
+\hypertarget{personnage_8h_source}{}\doxysection{personnage.\+h}
+\label{personnage_8h_source}\index{C:/Users/minth/Documents/EISE4/C++/poly-\/head-\/soccer/personnage.h@{C:/Users/minth/Documents/EISE4/C++/poly-\/head-\/soccer/personnage.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ PERSONNAGE\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ PERSONNAGE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}cercle.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QGraphicsPixmapItem>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QKeyEvent>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_personnage}{Personnage}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_cercle}{Cercle}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_personnage_a160dfc71154fc3993ff8beb4cda0b8c3}{Personnage}}(\textcolor{keywordtype}{int}\ left,\textcolor{keywordtype}{int}\ up,\textcolor{keywordtype}{int}\ right,\textcolor{keywordtype}{int}\ down)\ :\ \mbox{\hyperlink{class_cercle}{Cercle}}()\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_personnage_a6777ee761b38f15fb91d3ad3fc0baf79}{\_up}}\ =\ up;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_personnage_aedea97e54a001ce9d90885984b35cc12}{\_left}}\ =\ left;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_personnage_ad8de89d490e389386e4a70c131db2a6b}{\_right}}\ =\ right;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_personnage_a7a5eda5722473128b49881722147b654}{\_down}}\ =\ down;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cercle_a3b5cea08d41c5a874ecbd370c10fa57a}{radius}}\ =\ 30/2;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cercle_a776e5553edab60fa0da7b4daff5c4279}{mass}}\ =\ \mbox{\hyperlink{class_cercle_a3b5cea08d41c5a874ecbd370c10fa57a}{radius}}\ *\ 10.0f;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_personnage_a00001a365ba7da60c2880acdb31a68f1}{\_name}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00037\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_personnage_a517791bcbd1d1858c4c3d8fd84b66f5e}{keyPressEvent}}(\textcolor{keywordtype}{int}\ key);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_a80474b6b394a7773353e41d76a6f01eb}{getLeft}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_personnage_aedea97e54a001ce9d90885984b35cc12}{\_left}};\};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_a84f25517e55aa5165acca36fa8d9d09e}{getUp}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_personnage_a6777ee761b38f15fb91d3ad3fc0baf79}{\_up}};\};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_a07fdf6c053b84dbf0b182bba3321b118}{getRight}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_personnage_ad8de89d490e389386e4a70c131db2a6b}{\_right}};\};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_a0c29f168490b41164b4e08ae3b683ef7}{getDown}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_personnage_a7a5eda5722473128b49881722147b654}{\_down}};\};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_personnage_abae398c5e3e512ea079f7f09f5577894}{setInGame}}(\textcolor{keywordtype}{int}\ i)\ \{\mbox{\hyperlink{class_personnage_aa04c6204358131f7b751f7b8577d9331}{inGame}}\ =\ i;\};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_ae67a2b69597e2c2c897dc04d7e0ec514}{getInGame}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_personnage_aa04c6204358131f7b751f7b8577d9331}{inGame}};\};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ std::map<std::string,\ int>\ \mbox{\hyperlink{class_personnage_abe624fd7286b9c4e046ea229866a3285}{getMap}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_personnage_a90de4a726f07e023df110f61de7e4bbf}{\_map}};\};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{static}\ std::map<std::string,\ int>\ \&\mbox{\hyperlink{class_personnage_acf504b6779f87ee3b999303189500790}{setMap}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_personnage_a90de4a726f07e023df110f61de7e4bbf}{\_map}};\};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_personnage_a1a796ff394d9287c755a2edd1b42d23a}{clearMap}}()\ \{\mbox{\hyperlink{class_personnage_a90de4a726f07e023df110f61de7e4bbf}{\_map}}.clear();\};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_af94c5ac0c3d9b56d50e77ec3161fc905}{getPrice}}(std::string\ name)\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_personnage_a90de4a726f07e023df110f61de7e4bbf}{\_map}}[name];\};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_personnage_afa2c467ad54751ce514c4a3fd2501c8d}{move}}();}
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_aedea97e54a001ce9d90885984b35cc12}{\_left}};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_ad8de89d490e389386e4a70c131db2a6b}{\_right}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_a6777ee761b38f15fb91d3ad3fc0baf79}{\_up}};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_a7a5eda5722473128b49881722147b654}{\_down}};}
+\DoxyCodeLine{00066\ \ \ \ \ std::string\ \mbox{\hyperlink{class_personnage_a00001a365ba7da60c2880acdb31a68f1}{\_name}};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ std::map<std::string,\ int>\ \mbox{\hyperlink{class_personnage_a90de4a726f07e023df110f61de7e4bbf}{\_map}};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_personnage_aa04c6204358131f7b751f7b8577d9331}{inGame}}\ =\ 0;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{comment}{//operator<<}}
+\DoxyCodeLine{00077\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \mbox{\hyperlink{class_personnage}{Personnage}}\ p);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PERSONNAGE\_H}}
+
+\end{DoxyCode}

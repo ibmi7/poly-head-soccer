@@ -1,0 +1,4 @@
+<map id="Game::replayMenu" name="Game::replayMenu">
+<area shape="rect" id="node1" title=" " alt="" coords="149,5,281,31"/>
+<area shape="rect" id="node2" href="$class_ballon.html#a6df5f49069f0bbf256f0c35679ee4feb" title="Méthode qui permet de déplacer le ballon." alt="" coords="5,5,101,31"/>
+</map>

@@ -1,0 +1,156 @@
+\hypertarget{class_ballon}{}\doxysection{Ballon Class Reference}
+\label{class_ballon}\index{Ballon@{Ballon}}
+
+
+{\ttfamily \#include $<$ballon.\+h$>$}
+
+
+
+Inheritance diagram for Ballon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_ballon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ballon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_ballon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ballon_a6df5f49069f0bbf256f0c35679ee4feb}{move}} ()
+\begin{DoxyCompactList}\small\item\em Méthode qui permet de déplacer le ballon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Slots inherited from \mbox{\hyperlink{class_cercle}{Cercle}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cercle_abe2d2960326608b844aa826a76c2bf86}{move}} ()=0
+\begin{DoxyCompactList}\small\item\em move \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ballon_a0994677866267b431bc8e2885d215a4c}{Ballon}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_ballon}{Ballon}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ballon_af0006567d0ba251a49a1460c36fa2782}{$\sim$\+Ballon}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \mbox{\hyperlink{class_ballon}{Ballon}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ballon_a8d779bb26fee7b4effce942ee9fb8544}{key\+Press\+Event}} (int key)
+\begin{DoxyCompactList}\small\item\em Méthode qui permet de réinitialiser la position du ballon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cercle}{Cercle}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cercle_a7e6191f365b4e364cca618c4c911a1c7}{Cercle}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_cercle}{Cercle}}. \end{DoxyCompactList}\item 
+QVector$<$ QPair$<$ double, double $>$ $>$ \mbox{\hyperlink{class_cercle_a3c0f42714053c08167dda49521a4d3a2}{get\+Vit}} ()
+\item 
+QVector$<$ QPair$<$ double, double $>$ $>$ \& \mbox{\hyperlink{class_cercle_a003c5a8b3dec3852652eeadf464f4d87}{set\+Vit}} ()
+\item 
+double \mbox{\hyperlink{class_cercle_a4454c461d00af5bb1b09dbafc4e0ecb0}{get\+Mass}} ()
+\item 
+virtual void \mbox{\hyperlink{class_cercle_a3c86fbfd0b1384b44c9cc41d339de0cd}{key\+Press\+Event}} (int key)=0
+\begin{DoxyCompactList}\small\item\em key\+Press\+Event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QMedia\+Player $\ast$ \mbox{\hyperlink{class_ballon_a135363d781fe74a69c93c70f9db58fea}{\+\_\+goal\+\_\+sound}}
+\item 
+QMedia\+Player $\ast$ \mbox{\hyperlink{class_ballon_a9f12b0369cf65a9e6f47740b3eca39f1}{\+\_\+end\+\_\+sound}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_cercle}{Cercle}}}
+\begin{DoxyCompactItemize}
+\item 
+QVector$<$ QPair$<$ double, double $>$ $>$ \mbox{\hyperlink{class_cercle_a5c6a13ac2170edff6613b5cb7af8783f}{vit}}
+\item 
+QVector$<$ QPair$<$ double, double $>$ $>$ \mbox{\hyperlink{class_cercle_a4c1006564b2d1e189965760927c8626c}{acc}}
+\item 
+double \mbox{\hyperlink{class_cercle_a3b5cea08d41c5a874ecbd370c10fa57a}{radius}}
+\item 
+double \mbox{\hyperlink{class_cercle_a776e5553edab60fa0da7b4daff5c4279}{mass}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ballon_a0994677866267b431bc8e2885d215a4c}\label{class_ballon_a0994677866267b431bc8e2885d215a4c}} 
+\index{Ballon@{Ballon}!Ballon@{Ballon}}
+\index{Ballon@{Ballon}!Ballon@{Ballon}}
+\doxysubsubsection{\texorpdfstring{Ballon()}{Ballon()}}
+{\footnotesize\ttfamily Ballon\+::\+Ballon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \mbox{\hyperlink{class_ballon}{Ballon}}. 
+
+\mbox{\Hypertarget{class_ballon_af0006567d0ba251a49a1460c36fa2782}\label{class_ballon_af0006567d0ba251a49a1460c36fa2782}} 
+\index{Ballon@{Ballon}!````~Ballon@{$\sim$Ballon}}
+\index{````~Ballon@{$\sim$Ballon}!Ballon@{Ballon}}
+\doxysubsubsection{\texorpdfstring{$\sim$Ballon()}{~Ballon()}}
+{\footnotesize\ttfamily Ballon\+::$\sim$\+Ballon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la classe \mbox{\hyperlink{class_ballon}{Ballon}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ballon_a8d779bb26fee7b4effce942ee9fb8544}\label{class_ballon_a8d779bb26fee7b4effce942ee9fb8544}} 
+\index{Ballon@{Ballon}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!Ballon@{Ballon}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Ballon\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Méthode qui permet de réinitialiser la position du ballon. 
+
+
+
+Implements \mbox{\hyperlink{class_cercle_a3c86fbfd0b1384b44c9cc41d339de0cd}{Cercle}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ballon_a8d779bb26fee7b4effce942ee9fb8544_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_ballon_a6df5f49069f0bbf256f0c35679ee4feb}\label{class_ballon_a6df5f49069f0bbf256f0c35679ee4feb}} 
+\index{Ballon@{Ballon}!move@{move}}
+\index{move@{move}!Ballon@{Ballon}}
+\doxysubsubsection{\texorpdfstring{move}{move}}
+{\footnotesize\ttfamily void Ballon\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Méthode qui permet de déplacer le ballon. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ballon_a6df5f49069f0bbf256f0c35679ee4feb_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_ballon_a9f12b0369cf65a9e6f47740b3eca39f1}\label{class_ballon_a9f12b0369cf65a9e6f47740b3eca39f1}} 
+\index{Ballon@{Ballon}!\_end\_sound@{\_end\_sound}}
+\index{\_end\_sound@{\_end\_sound}!Ballon@{Ballon}}
+\doxysubsubsection{\texorpdfstring{\_end\_sound}{\_end\_sound}}
+{\footnotesize\ttfamily QMedia\+Player$\ast$ Ballon\+::\+\_\+end\+\_\+sound\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_ballon_a135363d781fe74a69c93c70f9db58fea}\label{class_ballon_a135363d781fe74a69c93c70f9db58fea}} 
+\index{Ballon@{Ballon}!\_goal\_sound@{\_goal\_sound}}
+\index{\_goal\_sound@{\_goal\_sound}!Ballon@{Ballon}}
+\doxysubsubsection{\texorpdfstring{\_goal\_sound}{\_goal\_sound}}
+{\footnotesize\ttfamily QMedia\+Player$\ast$ Ballon\+::\+\_\+goal\+\_\+sound\hspace{0.3cm}{\ttfamily [private]}}
+

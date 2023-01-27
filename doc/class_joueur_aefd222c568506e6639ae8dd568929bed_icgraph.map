@@ -1,0 +1,9 @@
+<map id="Joueur::updateFile" name="Joueur::updateFile">
+<area shape="rect" id="node1" title=" " alt="" coords="571,55,699,80"/>
+<area shape="rect" id="node2" href="$class_joueur.html#afc0316409bf281f58d6e52db5252892f" title=" " alt="" coords="364,5,523,31"/>
+<area shape="rect" id="node3" href="$class_game.html#ab39e1e3609ef6a3ffae64d0dcdd39068" title=" " alt="" coords="377,55,509,80"/>
+<area shape="rect" id="node5" href="$class_joueur.html#ad4f7425dabe12972e46a20f57da7abba" title=" " alt="" coords="395,104,492,129"/>
+<area shape="rect" id="node4" href="$class_ballon.html#a6df5f49069f0bbf256f0c35679ee4feb" title="Méthode qui permet de déplacer le ballon." alt="" coords="220,55,316,80"/>
+<area shape="rect" id="node6" href="$class_game.html#a39bb2fd26b5ea6b164f28f9f6723582e" title=" " alt="" coords="221,104,315,129"/>
+<area shape="rect" id="node7" href="$class_game.html#af74fd203e3b31917ca9d4769fa608c48" title=" " alt="" coords="5,104,172,129"/>
+</map>

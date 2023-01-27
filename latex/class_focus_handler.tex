@@ -1,0 +1,138 @@
+\hypertarget{class_focus_handler}{}\doxysection{Focus\+Handler Class Reference}
+\label{class_focus_handler}\index{FocusHandler@{FocusHandler}}
+
+
+{\ttfamily \#include $<$focushandler.\+h$>$}
+
+
+
+Inheritance diagram for Focus\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_focus_handler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Focus\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_focus_handler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_focus_handler_ac1a4ce6437780c92cf22713862e6fe45}{Focus\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_focus_handler}{Focus\+Handler}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_focus_handler_aa1407988f42877cc0ee86ef8f46c684c}{$\sim$\+Focus\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \mbox{\hyperlink{class_focus_handler}{Focus\+Handler}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_handler_a090b5fc8e189c1e5f83a5d60886b2df7}{add\+Personnage}} (\mbox{\hyperlink{class_personnage}{Personnage}} $\ast$pers)
+\begin{DoxyCompactList}\small\item\em Méthode qui permet d\textquotesingle{}ajouter un personnage à la liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_handler_ae67ea2f0a6838a2debba5aca601cd2ae}{set\+Ballon}} (\mbox{\hyperlink{class_ballon}{Ballon}} $\ast$ball)
+\begin{DoxyCompactList}\small\item\em Méthode qui de définir le ballon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_handler_a3edb3dc14d49691f623ebc295ef91476}{key\+Press\+Event}} (QKey\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Méthode qui permet de gérer les événements clavier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QVector$<$ \mbox{\hyperlink{class_personnage}{Personnage}} $\ast$ $>$ \mbox{\hyperlink{class_focus_handler_a27d4cbfde07d11b974875bd2b50b715a}{liste}}
+\item 
+\mbox{\hyperlink{class_ballon}{Ballon}} $\ast$ \mbox{\hyperlink{class_focus_handler_a249dc440963ca41210ca0abb3f9f4304}{ballon}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_focus_handler_ac1a4ce6437780c92cf22713862e6fe45}\label{class_focus_handler_ac1a4ce6437780c92cf22713862e6fe45}} 
+\index{FocusHandler@{FocusHandler}!FocusHandler@{FocusHandler}}
+\index{FocusHandler@{FocusHandler}!FocusHandler@{FocusHandler}}
+\doxysubsubsection{\texorpdfstring{FocusHandler()}{FocusHandler()}}
+{\footnotesize\ttfamily Focus\+Handler\+::\+Focus\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \mbox{\hyperlink{class_focus_handler}{Focus\+Handler}}. 
+
+\mbox{\Hypertarget{class_focus_handler_aa1407988f42877cc0ee86ef8f46c684c}\label{class_focus_handler_aa1407988f42877cc0ee86ef8f46c684c}} 
+\index{FocusHandler@{FocusHandler}!````~FocusHandler@{$\sim$FocusHandler}}
+\index{````~FocusHandler@{$\sim$FocusHandler}!FocusHandler@{FocusHandler}}
+\doxysubsubsection{\texorpdfstring{$\sim$FocusHandler()}{~FocusHandler()}}
+{\footnotesize\ttfamily Focus\+Handler\+::$\sim$\+Focus\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la classe \mbox{\hyperlink{class_focus_handler}{Focus\+Handler}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_focus_handler_a090b5fc8e189c1e5f83a5d60886b2df7}\label{class_focus_handler_a090b5fc8e189c1e5f83a5d60886b2df7}} 
+\index{FocusHandler@{FocusHandler}!addPersonnage@{addPersonnage}}
+\index{addPersonnage@{addPersonnage}!FocusHandler@{FocusHandler}}
+\doxysubsubsection{\texorpdfstring{addPersonnage()}{addPersonnage()}}
+{\footnotesize\ttfamily void Focus\+Handler\+::add\+Personnage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_personnage}{Personnage}} $\ast$}]{pers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Méthode qui permet d\textquotesingle{}ajouter un personnage à la liste. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_focus_handler_a090b5fc8e189c1e5f83a5d60886b2df7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_focus_handler_a3edb3dc14d49691f623ebc295ef91476}\label{class_focus_handler_a3edb3dc14d49691f623ebc295ef91476}} 
+\index{FocusHandler@{FocusHandler}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!FocusHandler@{FocusHandler}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Focus\+Handler\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Méthode qui permet de gérer les événements clavier. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_focus_handler_a3edb3dc14d49691f623ebc295ef91476_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_focus_handler_ae67ea2f0a6838a2debba5aca601cd2ae}\label{class_focus_handler_ae67ea2f0a6838a2debba5aca601cd2ae}} 
+\index{FocusHandler@{FocusHandler}!setBallon@{setBallon}}
+\index{setBallon@{setBallon}!FocusHandler@{FocusHandler}}
+\doxysubsubsection{\texorpdfstring{setBallon()}{setBallon()}}
+{\footnotesize\ttfamily void Focus\+Handler\+::set\+Ballon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ballon}{Ballon}} $\ast$}]{ball }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Méthode qui de définir le ballon. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_focus_handler_ae67ea2f0a6838a2debba5aca601cd2ae_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_focus_handler_a249dc440963ca41210ca0abb3f9f4304}\label{class_focus_handler_a249dc440963ca41210ca0abb3f9f4304}} 
+\index{FocusHandler@{FocusHandler}!ballon@{ballon}}
+\index{ballon@{ballon}!FocusHandler@{FocusHandler}}
+\doxysubsubsection{\texorpdfstring{ballon}{ballon}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ballon}{Ballon}}$\ast$ Focus\+Handler\+::ballon\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_focus_handler_a27d4cbfde07d11b974875bd2b50b715a}\label{class_focus_handler_a27d4cbfde07d11b974875bd2b50b715a}} 
+\index{FocusHandler@{FocusHandler}!liste@{liste}}
+\index{liste@{liste}!FocusHandler@{FocusHandler}}
+\doxysubsubsection{\texorpdfstring{liste}{liste}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{class_personnage}{Personnage}} $\ast$$>$ Focus\+Handler\+::liste\hspace{0.3cm}{\ttfamily [private]}}
+

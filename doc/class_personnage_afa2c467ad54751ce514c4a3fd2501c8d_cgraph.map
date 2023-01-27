@@ -1,0 +1,6 @@
+<map id="Personnage::move" name="Personnage::move">
+<area shape="rect" id="node1" title="move" alt="" coords="5,55,135,80"/>
+<area shape="rect" id="node2" href="$class_cercle.html#a4454c461d00af5bb1b09dbafc4e0ecb0" title=" " alt="" coords="183,5,300,31"/>
+<area shape="rect" id="node3" href="$class_cercle.html#a3c0f42714053c08167dda49521a4d3a2" title=" " alt="" coords="191,55,292,80"/>
+<area shape="rect" id="node4" href="$class_cercle.html#a003c5a8b3dec3852652eeadf464f4d87" title=" " alt="" coords="191,104,292,129"/>
+</map>

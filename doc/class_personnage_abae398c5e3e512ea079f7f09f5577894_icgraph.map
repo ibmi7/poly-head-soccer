@@ -1,0 +1,11 @@
+<map id="Personnage::setInGame" name="Personnage::setInGame">
+<area shape="rect" id="node1" title=" " alt="" coords="809,55,972,80"/>
+<area shape="rect" id="node2" href="$class_game.html#aa333825d0bca80e91e53c7e23f053405" title=" " alt="" coords="672,55,761,80"/>
+<area shape="rect" id="node3" href="$class_game.html#a064c6b9107c0c4f7164bde31f0b6c712" title=" " alt="" coords="423,55,624,80"/>
+<area shape="rect" id="node4" href="$class_game.html#af74fd203e3b31917ca9d4769fa608c48" title=" " alt="" coords="208,5,375,31"/>
+<area shape="rect" id="node6" href="$class_game.html#a3687106ca491158b437683174de720c0" title=" " alt="" coords="223,55,360,80"/>
+<area shape="rect" id="node8" href="$class_game.html#ab39e1e3609ef6a3ffae64d0dcdd39068" title=" " alt="" coords="225,104,357,129"/>
+<area shape="rect" id="node5" href="$class_game.html#a39bb2fd26b5ea6b164f28f9f6723582e" title=" " alt="" coords="35,5,130,31"/>
+<area shape="rect" id="node7" href="$class_game.html#a7d9e48887a75f9c62cc5bf1543d041d4" title=" " alt="" coords="5,55,160,80"/>
+<area shape="rect" id="node9" href="$class_ballon.html#a6df5f49069f0bbf256f0c35679ee4feb" title="Méthode qui permet de déplacer le ballon." alt="" coords="35,104,131,129"/>
+</map>

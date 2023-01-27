@@ -1,0 +1,48 @@
+\hypertarget{joueur_8h_source}{}\doxysection{joueur.\+h}
+\label{joueur_8h_source}\index{C:/Users/minth/Documents/EISE4/C++/poly-\/head-\/soccer/joueur.h@{C:/Users/minth/Documents/EISE4/C++/poly-\/head-\/soccer/joueur.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ JOUEUR\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ JOUEUR\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QMediaPlayer>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}personnage.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_joueur}{Joueur}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_joueur}{Joueur}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joueur_a8c2a335a4551dc3a094898b13fdac013}{solde}},\ std::string\ \mbox{\hyperlink{class_joueur_a9a8bdea29cc03788576264bfdc7596d5}{name}},\ std::vector<std::string>\ \mbox{\hyperlink{class_joueur_ada339ddd8518fd370abcc40377f85b8a}{equipe}});}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_joueur_a9fb594f755601ee77ce5884c4c0861f3}{\string~Joueur}}();}
+\DoxyCodeLine{00037\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{class_joueur_aeb68d9dc3f26770e7d6f3b1cb30bffff}{getEquipe}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_joueur_ada339ddd8518fd370abcc40377f85b8a}{equipe}};\};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joueur_a2241c6234e3d842788752dbf82dcc99d}{getSolde}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_joueur_a8c2a335a4551dc3a094898b13fdac013}{solde}};\};}
+\DoxyCodeLine{00039\ \ \ \ \ std::string\ \mbox{\hyperlink{class_joueur_a104621c95cf152be6efec6235e377dd4}{getName}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_joueur_a9a8bdea29cc03788576264bfdc7596d5}{name}};\};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joueur_ad445de3638ad860f6adfe32dad6cc5d2}{setSolde}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joueur_a8c2a335a4551dc3a094898b13fdac013}{solde}})\ \{this-\/>solde\ =\ \mbox{\hyperlink{class_joueur_a8c2a335a4551dc3a094898b13fdac013}{solde}};\};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joueur_aa42de69b19fd23b750aba770a0415fac}{setEquipe}}(std::string\ \mbox{\hyperlink{class_joueur_ada339ddd8518fd370abcc40377f85b8a}{equipe}})\ \{this-\/>equipe.push\_back(\mbox{\hyperlink{class_joueur_ada339ddd8518fd370abcc40377f85b8a}{equipe}});\};\ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<Joueur*>\ \mbox{\hyperlink{class_joueur_a3691f42edc6d7ec1004e1f2ba5ad0f39}{listeJoueur}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joueur_a8f9c35d2ed0d2da6a0519b3f9281678a}{clearListeJoueur}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_personnage}{Personnage}}*\ \mbox{\hyperlink{class_joueur_a787770f65a6a08b4a1aba2aee3a122ef}{active\_pers}};}
+\DoxyCodeLine{00045\ \ \ \ \ std::string\ \mbox{\hyperlink{class_joueur_a5ba8036208a35efd6bf37a86b36063b0}{getNom}}()\ \{\textcolor{keywordflow}{return}\ (\mbox{\hyperlink{class_joueur_a9a8bdea29cc03788576264bfdc7596d5}{name}});\};}
+\DoxyCodeLine{00046\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{class_joueur_a0bcabbb9b1249a8992b2021d03639ee3}{getNotOwned}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_joueur_a9921448da78a2e2674fd01c1b509c5a7}{notOwned}};\};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joueur_ad4f7425dabe12972e46a20f57da7abba}{reset}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joueur_afc0316409bf281f58d6e52db5252892f}{buyPersonnage}}(std::string\ \mbox{\hyperlink{class_joueur_a9a8bdea29cc03788576264bfdc7596d5}{name}});}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joueur_aefd222c568506e6639ae8dd568929bed}{updateFile}}();}
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{class_joueur_ada339ddd8518fd370abcc40377f85b8a}{equipe}};}
+\DoxyCodeLine{00052\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{class_joueur_a9921448da78a2e2674fd01c1b509c5a7}{notOwned}};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joueur_a8c2a335a4551dc3a094898b13fdac013}{solde}};}
+\DoxyCodeLine{00054\ \ \ \ \ std::string\ \mbox{\hyperlink{class_joueur_a9a8bdea29cc03788576264bfdc7596d5}{name}};}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \mbox{\hyperlink{class_joueur}{Joueur}}\ j);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ JOUEUR\_H}}
+
+\end{DoxyCode}

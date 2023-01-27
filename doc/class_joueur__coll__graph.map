@@ -1,0 +1,7 @@
+<map id="Joueur" name="Joueur">
+<area shape="rect" id="node1" title=" " alt="" coords="41,795,177,1107"/>
+<area shape="rect" id="node2" href="$class_personnage.html" title=" " alt="" coords="44,391,173,732"/>
+<area shape="rect" id="node3" href="$class_cercle.html" title=" " alt="" coords="44,132,173,341"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,76,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="100,5,253,83"/>
+</map>
