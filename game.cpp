@@ -430,7 +430,9 @@ void Game::play(){
 }
 
 void Game::replayMenu(int i){
-    std::cout << "je suis  dans replayMenu" << std::endl;
+    QMediaPlayer * music = new QMediaPlayer();
+    music->setMedia(QUrl("qrc:/Sounds/Sounds/coup_sifflet.mp3"));
+    music->play();
     Joueur::listeJoueur[0]->active_pers = nullptr;
     Joueur::listeJoueur[1]->active_pers = nullptr;
     //delete all items from the scene
