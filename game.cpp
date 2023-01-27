@@ -232,7 +232,7 @@ void Game::setPersonnage(){
                 Joueur::listeJoueur[0]->active_pers = nullptr;
             }
         }
-        Joueur::listeJoueur[0]->active_pers = (new Personnage(Qt::Key_Left,Qt::Key_Up,Qt::Key_Right,Qt::Key_Down));
+        Joueur::listeJoueur[0]->active_pers = (new Personnage(Qt::Key_Q,Qt::Key_Z,Qt::Key_D,Qt::Key_S));
         QString path = ":/Image/Image/Player/p1_" + namePersonnage + ".png";
         Joueur::listeJoueur[0]->setActiveName(namePersonnageS);
         Joueur::listeJoueur[0]->active_pers->setPixmap(QPixmap(path));
@@ -246,7 +246,7 @@ void Game::setPersonnage(){
                 Joueur::listeJoueur[1]->active_pers = nullptr;
             }
         }
-        Joueur::listeJoueur[1]->active_pers = (new Personnage(Qt::Key_Q,Qt::Key_Z,Qt::Key_D,Qt::Key_S));
+        Joueur::listeJoueur[1]->active_pers = (new Personnage(Qt::Key_Left,Qt::Key_Up,Qt::Key_Right,Qt::Key_Down));
         QString path = ":/Image/Image/Player/p2_" + namePersonnage + ".png";
         Joueur::listeJoueur[1]->setActiveName(namePersonnageS);
         Joueur::listeJoueur[1]->active_pers->setPixmap(QPixmap(path));
@@ -382,8 +382,8 @@ void Game::play(){
     *bg = bg->scaled(1500,768);
     scene->setBackgroundBrush(*bg);
     // create the personnage
-    Personnage * p1 = new Personnage(Qt::Key_Left,Qt::Key_Up,Qt::Key_Right,Qt::Key_Down);
-    Personnage * p2 = new Personnage(Qt::Key_Q,Qt::Key_Z,Qt::Key_D,Qt::Key_S);
+    Personnage * p2 = new Personnage(Qt::Key_Left,Qt::Key_Up,Qt::Key_Right,Qt::Key_Down);
+    Personnage * p1 = new Personnage(Qt::Key_Q,Qt::Key_Z,Qt::Key_D,Qt::Key_S);
     p1->setInGame(true);
     p1->setPixmap(QPixmap(":/Image/Image/Player/p1_" + QString::fromStdString(Joueur::listeJoueur[0]->getEquipe()[0]) + ".png"));
     p2->setInGame(true);

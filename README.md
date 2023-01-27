@@ -1,7 +1,7 @@
 
 # PolyHeadSoccer
 
-Le projet de jeu PolyHeadSoccer vise à créer un jeu en local opposant deux joueurs représentant Messi et Ronaldo. Le but du jeu est d'acheter tous les joueurs disponibles sur le marché en premier. Les joueurs peuvent gagner des pièces en jouant des matchs et en les remportant. Il y a une fonctionnalité d'achat de joueurs qui permet aux joueurs d'utiliser leurs pièces pour acheter des joueurs supplémentaires pour renforcer leur équipe. Le jeu est contrôlé à l'aide des touches directionnelles du clavier pour Messi et les touches ZQSD pour Ronaldo.
+Le projet de jeu PolyHeadSoccer vise à créer un jeu en local opposant deux joueurs représentant Messi et Ronaldo. Le but du jeu est d'acheter tous les joueurs disponibles sur le marché en premier. Les joueurs peuvent gagner des pièces en jouant des matchs et en les remportant. Il y a une fonctionnalité d'achat de joueurs qui permet aux joueurs d'utiliser leurs pièces pour acheter des joueurs supplémentaires pour renforcer leur équipe. Le jeu est contrôlé à l'aide des touches ZSQD du clavier pour Messi et les touches directionnelles pour Ronaldo.
 
 
 ## Installation
@@ -25,7 +25,7 @@ Ouvrez le fichier index.html inclus dans le dossier doc pour avoir accès à une
 Pour compiler le programme, tapez la commande ` make ` sur le terminal dans le dossier source du projet.
 Pour l'éxecuter, tapez la commande `./HeadSoccer` sur le terminal.
 
-Lorsque vous lancez le jeu pour la première fois, les deux joueurs ont un solde de 100 pièces chacuns, et uniquement 1 personnage dans leur équipe (personnage France). Pour jouer, cliquez sur le bouton Play. Vous arriverez sur l'écran de sélection du personnage. A gauche, les personnages de Messi (contrôlés avec les touches directionnelles du clavier). A droite, les personnages de Ronaldo (contrôlés avec les touches ZSQD du clavier). Sélectionnez un personnage de chaque côté et appuyez sur Play pour lancer une partie.
+Lorsque vous lancez le jeu pour la première fois, les deux joueurs ont un solde de 100 pièces chacuns, et uniquement 1 personnage dans leur équipe (personnage France). Pour jouer, cliquez sur le bouton Play. Vous arriverez sur l'écran de sélection du personnage. A gauche, les personnages de Messi (contrôlés avec les touches ZSQD du clavier). A droite, les personnages de Ronaldo (contrôlés avec les touches directionnelles du clavier). Sélectionnez un personnage de chaque côté et appuyez sur Play pour lancer une partie.
 
 L'objectif est d'être le premier à marquer 3 buts. Le gagnant reçoit 100 pièces en récompenses.
 
